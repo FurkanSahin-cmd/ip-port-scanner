@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: #080c10;
+    color: #00ff66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.terminal-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.15);
+    overflow: hidden;
+}
+
+/* Header / Üst Bar */
+.terminal-header {
+    background-color: #161b22;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    color: #8b949e;
+}
+
+/* Body / İçerik */
+.terminal-body {
+    padding: 20px;
+}
+
+.banner pre {
+    color: #00f0ff;
+    font-size: 0.75rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    color: #8b949e;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.status-online {
+    color: #00ff66;
+    font-weight: bold;
+}
+
+/* Input / Girdi */
+.input-section label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #58a6ff;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 5px 12px;
+    margin-bottom: 25px;
+}
+
+.prompt {
+    color: #00f0ff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0f6fc;
+    font-size: 1rem;
+    padding: 8px 0;
+}
+
+.input-box button {
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.input-box button:hover {
+    background-color: #2ea043;
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.4);
+}
+
+/* Output / Konsol */
+.section-title {
+    font-size: 0.9rem;
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.console-box {
+    background-color: #010409;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 15px;
+    height: 250px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.system-msg { color: #8b949e; }
+.log-info { color: #00f0ff; }
+.log-success { color: #00ff66; }
+.log-warning { color: #ffbd2e; }
+.log-danger { color: #ff5f56; }

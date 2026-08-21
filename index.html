@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSentinel // Security Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="terminal-container">
+        <!-- Terminal Üst Barı -->
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
+            </div>
+            <div class="title">
+                <i class="fa-solid fa-shield-halved"></i> CyberSentinel v1.0 - Network & Security Analyzer
+            </div>
+        </div>
+
+        <!-- Terminal İçeriği -->
+        <div class="terminal-body">
+            <div class="banner">
+<pre>
+   ██████╗██╗   ██╗██████╗ ███████╗██████╗ 
+  ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗
+  ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝
+  ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗
+  ╚██████╗   ██║   ██████╔╝███████╗██║  ██║
+   ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
+</pre>
+                <p>> System Status: <span class="status-online">ONLINE</span> | Dev : FurkanSahin-cmd</p>
+            </div>
+
+            <!-- Girdi Alanı -->
+            <div class="input-section">
+                <label for="targetInput">> Enter Target IP or Domain:</label>
+                <div class="input-box">
+                    <span class="prompt">$</span>
+                    <input type="text" id="targetInput" placeholder="e.g. 192.168.1.1 or scanme.nmap.org" autocomplete="off">
+                    <button id="scanBtn" type="button"><i class="fa-solid fa-terminal"></i> SCAN TARGET</button>
+                </div>
+            </div>
+
+            <!-- Çıktı / Konsol Alanı -->
+            <div class="output-section">
+                <div class="section-title">> Scan Output & Logs:</div>
+                <div id="consoleLog" class="console-box">
+                    <p class="system-msg">[SYSTEM READY] Awaiting target input...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
